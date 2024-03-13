@@ -6,8 +6,10 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <Balance />
-      <TransactionsList />
+      <div className="m-20">
+        <Balance />
+        <TransactionsList />
+      </div>
     </>
   );
 };
