@@ -9,6 +9,13 @@
     box-sizing: border-box;
 }
 
+body {
+  background-color: #f4faf5;
+}
+
+.effect {
+  box-shadow: 1px 3px 8px 4px lightgray;
+}
 
 .open-sans-basic {
   font-family: "Open Sans", sans-serif;

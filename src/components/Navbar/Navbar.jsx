@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
     <>
       <div className="w-[90%] m-auto flex items-center mt-7 open-sans-basic text-lg">
-        <div className="bg-zinc-900 w-[90%] m-auto h-fit p-2 rounded-xl">
+        <div className="bg-zinc-900 w-[90%] m-auto h-fit p-2 rounded-xl effect">
           <div className="list-none flex text-zinc-50 justify-evenly">
             <Link to="/">Home</Link>
             <Link to="/account">Account</Link>
