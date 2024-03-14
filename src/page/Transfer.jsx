@@ -4,7 +4,7 @@ export const Transfer = () => {
   return (
     <>
       <Navbar />
-      <div className="m-20 mt-10">Saving</div>
+      <div className="m-20 mt-10">Transfer</div>
     </>
   );
 };
