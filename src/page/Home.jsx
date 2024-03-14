@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="m-20">
+      <div className="m-20 mt-10">
         <Balance />
         <TransactionsList />
       </div>

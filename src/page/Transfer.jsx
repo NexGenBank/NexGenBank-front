@@ -1,5 +1,10 @@
+import { Navbar } from "../components/Navbar/Navbar";
+
 export const Transfer = () => {
   return (
-    <div>Transfer</div>
-  )
-}
+    <>
+      <Navbar />
+      <div className="m-20 mt-10">Saving</div>
+    </>
+  );
+};
