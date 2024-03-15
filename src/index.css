@@ -1,26 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #f4faf5;
+  background-color: #ffffff;
 }
 
 .effect {
-  box-shadow: 1px 3px 8px 4px lightgray;
+  box-shadow: 5px 5px 3px 2px rgb(236, 236, 236);
+}
+
+.card-effect {
+  box-shadow: 6px 7px 10px 10px rgb(236, 236, 236);
 }
 
 .open-sans-basic {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
