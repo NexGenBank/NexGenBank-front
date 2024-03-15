@@ -1,9 +1,31 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const Balance = () => {
-  const [balance, setBalance] = useState("10 000 000");
-  const [expense, setExpense] = useState("20 000 000");
-  const [saving, setSaving] = useState("30 000 000");
+  const [balance, setBalance] = useState([]);
+  const [expense, setExpense] = useState([]);
+  const [saving, setSaving] = useState([]);
+
+  const apiUrl = "https://fakestoreapi.com/products";
+
+  useEffect(() => {
+    async function getBalanceData() {
+      const response = await axios.get(`${apiUrl}/1`);
+      setBalance(response.data.price);
+    }
+    getBalanceData();
+    async function getExpenseData() {
+      const response = await axios.get(`${apiUrl}/2`);
+      setExpense(response.data.price);
+    }
+    getExpenseData();
+        async function getSavingData() {
+          const response = await axios.get(`${apiUrl}/3`);
+          setSaving(response.data.price);
+        }
+        getSavingData();
+  }),
+    [];
 
   return (
     <>
