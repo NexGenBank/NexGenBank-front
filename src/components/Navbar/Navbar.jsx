@@ -4,8 +4,8 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="w-[90%] m-auto flex items-center mt-7 open-sans-basic text-lg">
-        <div className="bg-zinc-900 w-[90%] m-auto h-fit p-2 rounded-xl effect">
+      <div className="mx-80 flex items-center mt-7 open-sans-basic text-lg">
+        <div className="bg-zinc-900 w-full m-auto h-fit p-2 rounded-xl effect">
           <div className="list-none flex text-zinc-50 justify-evenly">
             <Link to="/">Home</Link>
             <Link to="/account">Account</Link>
@@ -15,7 +15,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div>
-          <div className="bg-zinc-50 w-[40px] h-[40px] rounded-full border-solid border-zinc-900 border-2"></div>
+          <div className="bg-zinc-50 w-[40px] h-[40px] rounded-full border-solid border-zinc-900 border-2 ml-6"></div>
         </div>
       </div>
     </>
