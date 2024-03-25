@@ -29,7 +29,7 @@ export const Balance = () => {
 
   return (
     <>
-      <div className="px-4 pt-1 text-xl font-semibold open-sans-basic uppercase bg-zinc-100 w-fit rounded-t-xl">
+      <div className="px-4 pt-1 text-xl font-semibold open-sans-basic bg-zinc-100 w-fit rounded-t-xl">
         Account name
       </div>
       <div className="flex w-full justify-between gap-2 items-center uppercase">
