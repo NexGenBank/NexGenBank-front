@@ -29,48 +29,58 @@ export const Balance = () => {
 
   return (
     <>
-      <div className="px-4 pt-1 text-xl font-semibold open-sans-basic bg-zinc-100 w-fit rounded-t-xl">
-        Account name
-      </div>
-      <div className="flex w-full justify-between gap-2 items-center uppercase">
-        <div className="bg-zinc-100 rounded-lg rounded-tl-none px-4 py-3 h-40 flex flex-col flex-nowrap justify-start w-full">
-          <div className="text-md open-sans-basic font-semibold ">Balance</div>
-          <div className="flex justify-between px-4 mt-2">
-            <div className="min-w-[150px] max-w-[250px] font-normal text-4xl mt-1">
-              ${balance}
-            </div>
-            <div className="flex flex-col flex-nowrap gap-3">
-              <div className="bg-red-600 w-28 h-fit text-zinc-50 font-semibold px-6 py-2 flex justify-center rounded-md">
-                Withdraw
+      <div className="text-2xl open-sans-basic">Overview</div>
+      <div className="flex w-full justify-between gap-2 items-center">
+        <div>
+          <div className="bg-zinc-100 rounded-t-xl w-fit px-6 pt-2 text-sm open-sans-basic">
+            Total Balance
+          </div>
+          <div className="bg-zinc-100 rounded-3xl rounded-tl-none px-4 py-4 h-40 flex flex-col flex-nowrap justify-start w-full">
+            <div className="flex flex-col h-full justify-between">
+              <div className="min-w-[150px] max-w-[250px] font-normal text-4xl p-2">
+                ${balance}
               </div>
-              <div className="bg-green-600 w-28 h-fit text-zinc-50 font-semibold px-6 py-2 flex justify-center rounded-md">
-                Credit
+              <div className="flex flex-nowrap gap-3 mt-2">
+                <div className="bg-zinc-500 w-36 h-fit text-zinc-50 text-base py-2 flex justify-center rounded-2xl">
+                  Credit
+                </div>
+                <div className="bg-zinc-300 w-36 h-fit text-zinc-900 py-2 flex justify-center rounded-2xl">
+                  Withdraw
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-zinc-100 rounded-lg px-4 py-3 h-40 flex flex-col flex-nowrap justify-start w-full">
-          <div className="text-md open-sans-basic font-semibold">Expense</div>
-          <div className="flex justify-between px-4 mt-2">
-            <div className="min-w-[150px] max-w-[250px] font-normal text-4xl mt-1">
-              ${expense}
-            </div>
-            <div className="flex flex-col flex-nowrap gap-5">
-              <div className="bg-blue-900 w-28 h-fit text-zinc-50 font-semibold px-6 py-2 flex justify-center rounded-md">
-                Add
+        <div className="w-full">
+          <div className="bg-zinc-100 rounded-t-xl w-fit px-6 pt-2 text-sm open-sans-basic">
+            Spendings
+          </div>
+          <div className="bg-zinc-100 rounded-3xl rounded-tl-none px-4 py-4 h-40 flex flex-col flex-nowrap justify-start w-full">
+            <div className="flex flex-col h-full justify-between">
+              <div className="min-w-[150px] max-w-[250px] font-normal text-4xl mt-1 p-2">
+                ${expense}
+              </div>
+              <div className="flex flex-col flex-nowrap gap-5">
+                <div className="bg-zinc-500 w-36 h-fit text-zinc-50 text-base py-2 flex justify-center rounded-2xl">
+                  Add
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-zinc-100 rounded-lg px-4 py-3 h-40 flex flex-col flex-nowrap justify-start w-full">
-          <div className="text-md open-sans-basic font-semibold">Savings</div>
-          <div className="flex justify-between px-4 mt-2">
-            <div className="min-w-[150px] max-w-[250px] font-normal text-4xl mt-1">
-              ${saving}
-            </div>
-            <div className="flex flex-col flex-nowrap gap-5">
-              <div className="bg-blue-900 w-28 h-fit text-zinc-50 font-semibold px-6 py-2 flex justify-center rounded-md">
-                Add
+        <div className="w-full">
+          <div className="bg-zinc-100 rounded-t-xl w-fit px-6 pt-2 text-sm open-sans-basic">
+            Savings
+          </div>
+          <div className="bg-zinc-100 rounded-3xl rounded-tl-none px-4 py-4 h-40 flex flex-col flex-nowrap justify-start w-full">
+            <div className="flex flex-col h-full justify-between">
+              <div className="min-w-[150px] max-w-[250px] font-normal text-4xl mt-1 p-2">
+                ${saving}
+              </div>
+              <div className="flex flex-col flex-nowrap gap-5">
+                <div className="bg-zinc-500 w-36 h-fit text-zinc-50 text-base py-2 flex justify-center rounded-2xl">
+                  Add
+                </div>
               </div>
             </div>
           </div>
