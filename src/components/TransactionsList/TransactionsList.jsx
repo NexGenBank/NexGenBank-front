@@ -1,10 +1,49 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import DataTable, { createTheme } from "react-data-table-component";
+
+createTheme(
+  "lightgray",
+  {
+    background: {
+      default: "#f4f4f5",
+    },
+    text: {
+      primary: "#000000",
+      secondary: "#000000",
+    },
+    button: {
+      default: "#000000",
+    },
+  },
+  "dark"
+);
 
 export const TransactionsList = () => {
   const [loading, setLoading] = useState(true);
   const [transactions, setTransactions] = useState([]);
+
+  const columns = [
+    {
+      name: "Transaction Id",
+      selector: (row) => row.id,
+      sortable: true,
+    },
+    {
+      name: "Type",
+      selector: (row) => row.category,
+      sortable: true,
+    },
+    {
+      name: "Date",
+      selector: (row) => row.price,
+      sortable: true,
+    },
+    {
+      name: "Amount",
+      selector: (row) => row.price,
+    },
+  ];
 
   const apiUrl = "https://fakestoreapi.com/products";
 
@@ -19,7 +58,6 @@ export const TransactionsList = () => {
       }
       setLoading(false);
     }
-  
     getTransactions();
   }, []);
 
@@ -27,8 +65,13 @@ export const TransactionsList = () => {
     <>
       <div className="mt-10">
         <div className="text-xl open-sans-basic">Transactions </div>
-        <div className="mt-3 bg-zinc-100 rounded-3xl w-full h-52">
-          
+        <div className="mt-3 bg-zinc-100 rounded-3xl w-full min-h-52 p-3">
+          <DataTable
+            columns={columns}
+            data={transactions}
+            theme="lightgray"
+            pagination
+          />
         </div>
       </div>
     </>
