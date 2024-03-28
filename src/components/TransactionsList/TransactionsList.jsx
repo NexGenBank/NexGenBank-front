@@ -2,6 +2,19 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import DataTable, { createTheme } from "react-data-table-component";
 
+const customStyles = {
+  rows: {
+    style: {
+      fontSize: "14px",
+    },
+  },
+  headCells: {
+    style: {
+      fontSize: "16px"
+    }
+  }
+};
+
 createTheme(
   "lightgray",
   {
@@ -20,7 +33,6 @@ createTheme(
 );
 
 export const TransactionsList = () => {
-  const [loading, setLoading] = useState(true);
   const [transactions, setTransactions] = useState([]);
 
   const columns = [
@@ -49,14 +61,12 @@ export const TransactionsList = () => {
 
   useEffect(() => {
     async function getTransactions() {
-      setLoading(true);
       try {
         const { data } = await axios.get(apiUrl);
         setTransactions(data);
       } catch (error) {
         console.error(error.message);
       }
-      setLoading(false);
     }
     getTransactions();
   }, []);
@@ -71,6 +81,7 @@ export const TransactionsList = () => {
             data={transactions}
             theme="lightgray"
             pagination
+            customStyles={customStyles}
           />
         </div>
       </div>
