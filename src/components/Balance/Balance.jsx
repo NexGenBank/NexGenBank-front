@@ -52,18 +52,15 @@ export const Balance = () => {
               </div>
             </div>
           </div>
-          <div className="bg-zinc-100 rounded-3xl px-4 py-4 h-40 flex flex-col justify-start w-full">
+          <div className="bg-zinc-100 rounded-3xl p-4 h-40 flex flex-col justify-start w-full">
             <div className="flex flex-col h-full justify-between">
-              <div className="min-w-[150px] max-w-[250px] font-normal text-4xl p-2">
-                ${balance}
+              <div className="px-2">
+                <p className="">Loan</p>
+                <div className="text-3xl">${balance}</div>
               </div>
-              <div className="flex flex-nowrap gap-3 mt-2">
-                <div className="bg-zinc-500 w-36 h-fit text-zinc-50 text-base py-2 flex justify-center rounded-2xl">
-                  Credit
-                </div>
-                <div className="bg-zinc-300 w-36 h-fit text-zinc-900 py-2 flex justify-center rounded-2xl">
-                  Withdraw
-                </div>
+              <div className="px-2">
+                <p className="">Interest</p>
+                <div className="text-3xl">${balance}</div>
               </div>
             </div>
           </div>
