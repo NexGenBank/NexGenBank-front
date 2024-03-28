@@ -5,6 +5,15 @@ export const Balance = () => {
   const [balance, setBalance] = useState([]);
   const [expense, setExpense] = useState([]);
   const [saving, setSaving] = useState([]);
+  const [creditForm, setCreditForm] = useState(false);
+
+  const handleCreditButton = () => {
+    setCreditForm(true);
+  };
+
+  const handleCloseCreditButton = () => {
+    setCreditForm(false);
+  };
 
   const apiUrl = "https://fakestoreapi.com/products";
 
@@ -29,6 +38,17 @@ export const Balance = () => {
 
   return (
     <>
+      {creditForm && (
+        <div className="fixed z-40 top-0 bottom-0 left-0 right-0 backdrop-blur-sm w-full h-full">
+          <div className="fixed top-0 bottom-0 right-0 left-0 m-auto z-50 w-52 h-52 bg-red-500">
+            <form>
+              <label htmlFor="amount">Amount</label>
+              <input type="text" name="amount" />
+            </form>
+            <button onClick={handleCloseCreditButton}>X</button>
+          </div>
+        </div>
+      )}
       <div className="text-2xl open-sans-basic">Overview</div>
       <div className="flex w-full h-96 justify-between gap-5 items-start pb-5">
         <div className="flex flex-col justify-between h-full">
@@ -42,9 +62,12 @@ export const Balance = () => {
                   ${balance}
                 </div>
                 <div className="flex flex-nowrap gap-3 mt-2">
-                  <div className="bg-zinc-500 w-36 h-fit text-zinc-50 text-base py-2 flex justify-center rounded-2xl">
+                  <button
+                    className="bg-zinc-500 w-36 h-fit text-zinc-50 text-base py-2 flex justify-center rounded-2xl"
+                    onClick={handleCreditButton}
+                  >
                     Credit
-                  </div>
+                  </button>
                   <div className="bg-zinc-300 w-36 h-fit text-zinc-900 py-2 flex justify-center rounded-2xl">
                     Withdraw
                   </div>

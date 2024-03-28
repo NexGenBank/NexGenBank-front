@@ -73,7 +73,7 @@ export const TransactionsList = () => {
 
   return (
     <>
-      <div className="mt-10">
+      <div className="mt-10 h-full">
         <div className="text-xl open-sans-basic">Transactions </div>
         <div className="mt-3 bg-zinc-100 rounded-3xl w-full min-h-52 p-3">
           <DataTable
